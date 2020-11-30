@@ -1,4 +1,4 @@
-package com.comparator.APIDataExtractor;
+package com.comparator.APIDataExtractor_Package;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

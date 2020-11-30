@@ -1,6 +1,6 @@
 package com.comparator;
 
-import com.comparator.APIDataExtractor.ExtractAPIData;
+import com.comparator.APIDataExtractor_Package.ExtractAPIData;
 import com.comparator.UIDataExtractor.ExtractUIData;
 import com.comparator.Util.DataReader;
 import org.openqa.selenium.WebDriver;
@@ -9,13 +9,13 @@ import static java.lang.Math.abs;
 
 public class WeatherComparator {
 
-    private final DataReader dataReader = new DataReader();
     private final ExtractUIData extractUIData;
-    private final ExtractAPIData extractAPIData;
+    private APIDataExtractor extractAPIData;
+    DataReader dataReader = new DataReader();
 
-    public WeatherComparator(String cityName, WebDriver driver) {
+    public WeatherComparator(String cityName, WebDriver driver, APIDataExtractor extractAPIData) {
         extractUIData = new ExtractUIData(cityName,driver);
-        extractAPIData = new ExtractAPIData(cityName);
+        this.extractAPIData = extractAPIData;
     }
 
     public void compareTemperature(){

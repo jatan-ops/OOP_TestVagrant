@@ -6,12 +6,14 @@ import static java.lang.StrictMath.abs;
 
 public class DataReader {
     static Scanner sc = new Scanner(System.in);
-    public static String getCityName() {
+    public static String cityName;
+
+    public String getCityName() {
         System.out.print("Enter city name: ");
         if(sc.hasNext()){
             // convert city name in the format of 1st letter capital word regardless of how user entered it
         String name = sc.next().toLowerCase();
-        String cityName = name.substring(0, 1).toUpperCase() + name.substring(1);
+        cityName = name.substring(0, 1).toUpperCase() + name.substring(1);
         return cityName;
         }
         else{

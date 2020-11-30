@@ -1,6 +1,6 @@
 package com.comparator;
 
-import com.comparator.APIDataExtractor.ExtractAPIData;
+import com.comparator.APIDataExtractor_Package.ExtractAPIData;
 import com.comparator.UIDataExtractor.ExtractUIData;
 import com.comparator.Util.DataReader;
 import org.openqa.selenium.WebDriver;
